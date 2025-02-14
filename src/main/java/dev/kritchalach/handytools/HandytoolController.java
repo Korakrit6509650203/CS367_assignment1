@@ -44,20 +44,26 @@ public class HandytoolController {
     @PutMapping("/statesOfItems/{id}")
     Storage saveHandyTool(@RequestBody Storage newItems, @PathVariable Long id) {
         return repository.findById(id).map(items -> {
-            items.setBorrowed(newItems.getBorrowed());
-            items.setUserName(newItems.getUserName());
-            items.setStorageName(newItems.getStorageName());
-            items.setOwnerName(newItems.getOwnerName());
             items.setItemsDetail(newItems.getItemsDetail());
+            items.setOwnerName(newItems.getOwnerName());
+            items.setStorageName(newItems.getStorageName());
+            items.setAvailability(newItems.getAvailability());
+            items.setUserName(newItems.getUserName());
+            items.setBorrowed(newItems.getBorrowed());
+            items.setBorrowingDate(newItems.getBorrowingDate());
+            items.setPeriod(newItems.getPeriod());
             items.setWhereUse(newItems.getWhereUse());
-            items.setWhenUse(newItems.getWhenUse());
+            items.setReturned(newItems.getReturned());
+            items.setProblem(newItems.getProblem());
+            items.setReason(newItems.getReason());
+            items.setReturnDate(newItems.getReturnDate());
             items.setStatus(newItems.getStatus());
             return repository.save(items);
         }).orElseGet(() -> {
             return repository.save(newItems);
         });
     }
-    
+
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("/statesOfItems/{id}")
     void deleteHandyTool(@PathVariable Long id) {

@@ -1,49 +1,58 @@
-### 
+### ตรวจสอบรายละเอียดของสิ่งของก่อนหน้าที่ซื้อมาทั้งหมด 
 GET http://localhost:8080/statesOfItems
 
-###
+### ตรวจสอบรายละเอียดของสิ่งของก่อนหน้าที่ซื้อมาชิ้นที่ 1
 GET http://localhost:8080/statesOfItems/1
 
-###
+### ซื้อสิ่งของมาใหม่ และนำไปจัดเก็บไว้ 
 POST http://localhost:8080/statesOfItems
 Content-Type: application/json
 
 {
     "itemsDetail": "Badminton racket",
     "ownerName": "Poommy",
-    "storageName": "Dormitory Jpark",
-    "borrowed": false,
-    "returned": false,
+    "storageName": "Dormitory AccomPark",
+    "availability": true,
     "userName": "",
+    "borrowed": false,
+    "borrowingDate": "",
+    "period": "",
     "whereUse": "",
-    "whenUse": "2025-02-14 00:16:09",
-    "status": "Buy item"
+    "returned": false,
+    "problem": false,
+    "reason":"",
+    "returnDate": "",
+    "status": "Already exists"
 }
 
-### 
-GET http://localhost:8080/statesOfItems
-
-###
+### ซื้อสิ่งของมาใหม่ และนำไปจัดเก็บไว้ 
 POST http://localhost:8080/statesOfItems
 Content-Type: application/json
 
 {
-    "itemsDetail": "Drill",
-    "ownerName": "KT",
-    "storageName": "Hanging at the barn's wall",
+    "itemsDetail": "Badminton shoes",
+    "ownerName": "Pee",
+    "storageName": "Dormitory TwinTown",
+    "availability": false,
+    "userName": "Pee",
     "borrowed": false,
-    "returned": false,
-    "userName": "",
+    "borrowingDate": "",
+    "period": "",
     "whereUse": "",
-    "whenUse": "2025-02-14 00:05:09",
-    "status": "Buy item"
+    "returned": false,
+    "problem": false,
+    "reason":"",
+    "returnDate": "",
+    "status": "Use it yourself"
 }
 
-###
+### ตรวจสอบรายละเอียดของสิ่งของก่อนหน้าที่ซื้อมาทั้งหมด 
+GET http://localhost:8080/statesOfItems
+
+### ตรวจสอบรายละเอียดของสิ่งของก่อนหน้าที่ซื้อมาชิ้นที่ 99
 GET http://localhost:8080/statesOfItems/99
 
-
-###
+### มีคนมายืมสิ่งของชิ้นที่ 1
 PUT http://localhost:8080/statesOfItems/1
 Content-Type: application/json
 
@@ -51,13 +60,42 @@ Content-Type: application/json
     "itemsDetail": "Boardgame",
     "ownerName": "Tonkung",
     "storageName": "Dormitory M2",
+    "availability": false,
+    "userName": "Poommy",
     "borrowed": true,
+    "borrowingDate": "2025-02-14 12:39:01",
+    "period": "3 hour",
+    "whereUse": "Puey Library",
     "returned": false,
-    "userName": "Pungping",
-    "whereUse": "Dormitory M1",
-    "whenUse": "2025-02-14 00:09:09",
+    "problem": false,
+    "reason":"",
+    "returnDate": "",
     "status": "Borrowed"
 }
 
-###
-DELETE http://localhost:8080/statesOfItems/2
+### สิ่งของชิ้นที่ 1 เกิดปัญหาขึ้น จึงไม่สามารถคืนได้
+PUT http://localhost:8080/statesOfItems/1
+Content-Type: application/json
+
+{
+    "itemsDetail": "Boardgame",
+    "ownerName": "Tonkung",
+    "storageName": "Dormitory M2",
+    "availability": false,
+    "userName": "Poommy",
+    "borrowed": true,
+    "borrowingDate": "2025-02-14 12:39:01",
+    "period": "3 hour",
+    "whereUse": "Puey Library",
+    "returned": false,
+    "problem": true,
+    "reason":"I accidentally left it behind and it disappeared.",
+    "returnDate": "",
+    "status": "Problem occurred."
+}
+
+### สิ่งของชิ้นที่ 1 จึงถูกลบออกจาก Database
+DELETE http://localhost:8080/statesOfItems/1
+
+### ตรวจสอบรายละเอียดของสิ่งของก่อนหน้าที่ซื้อมาทั้งหมด 
+GET http://localhost:8080/statesOfItems

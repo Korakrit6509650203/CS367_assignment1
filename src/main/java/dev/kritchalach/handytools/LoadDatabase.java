@@ -27,9 +27,9 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(StorageRepository repository) {
         return args -> {
-            log.info("loading " + repository.save(new Storage("Boardgame", "Tonkung", "Dormitory M2", false, false, "", "", formattedDateTime1, "Buy items" )));
-            log.info("loading " + repository.save(new Storage("Book", "Tete", "Dormitory Brownie", false, false, "", "", formattedDateTime2, "Buy items" )));
-            log.info("loading " + repository.save(new Storage("Ipad", "Akeky", "Dormitory Jpark", false, false, "", "", formattedDateTime3, "Buy items" )));
+            log.info("loading " + repository.save(new Storage("Boardgame", "Tonkung", "Dormitory M2", true, "", false, "", "", "", false, false, "", "", "Buy items")));
+            log.info("loading " + repository.save(new Storage("Book", "Tete", "Dormitory Brownie", false, "nine", true, formattedDateTime1, "1.5 hour", "Dormitory Jpark", true, false, "", formattedDateTime2, "returned")));
+            log.info("loading " + repository.save(new Storage("Ipad", "Akeky", "Dormitory AccomPark", false, "Tonkung", true, formattedDateTime3, "7 Day", "Dormitory M2", false, false, "Using", "", "Borrowed")));
         };
     }
 }
