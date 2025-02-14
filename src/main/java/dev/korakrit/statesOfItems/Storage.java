@@ -1,4 +1,4 @@
-package dev.kritchalach.handytools;
+package dev.korakrit.statesOfItems;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

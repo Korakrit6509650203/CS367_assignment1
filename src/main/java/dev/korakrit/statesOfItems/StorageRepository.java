@@ -1,4 +1,4 @@
-package dev.kritchalach.handytools;
+package dev.korakrit.statesOfItems;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

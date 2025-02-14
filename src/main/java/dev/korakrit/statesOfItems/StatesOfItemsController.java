@@ -1,4 +1,4 @@
-package dev.kritchalach.handytools;
+package dev.korakrit.statesOfItems;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
-public class HandytoolController {
+public class StatesOfItemsController {
     private final StorageRepository repository;
 
-    HandytoolController(StorageRepository repository) {
+    StatesOfItemsController(StorageRepository repository) {
         this.repository = repository;
     }
 

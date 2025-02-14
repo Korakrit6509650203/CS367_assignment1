@@ -1,5 +1,5 @@
-/root/cs367/CS367_assignment1/src/main/java/dev/kritchalach/handytools/HandytoolController.java
-/root/cs367/CS367_assignment1/src/main/java/dev/kritchalach/handytools/HandytoolsApplication.java
-/root/cs367/CS367_assignment1/src/main/java/dev/kritchalach/handytools/LoadDatabase.java
-/root/cs367/CS367_assignment1/src/main/java/dev/kritchalach/handytools/Storage.java
-/root/cs367/CS367_assignment1/src/main/java/dev/kritchalach/handytools/StorageRepository.java
+/root/cs367/CS367_assignment1/src/main/java/dev/korakrit/statesOfItems/LoadDatabase.java
+/root/cs367/CS367_assignment1/src/main/java/dev/korakrit/statesOfItems/StatesOfItemsApplication.java
+/root/cs367/CS367_assignment1/src/main/java/dev/korakrit/statesOfItems/StatesOfItemsController.java
+/root/cs367/CS367_assignment1/src/main/java/dev/korakrit/statesOfItems/Storage.java
+/root/cs367/CS367_assignment1/src/main/java/dev/korakrit/statesOfItems/StorageRepository.java

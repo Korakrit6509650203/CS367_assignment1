@@ -1,13 +1,13 @@
-package dev.kritchalach.handytools;
+package dev.korakrit.statesOfItems;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HandytoolsApplication {
+public class StatesOfItemsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HandytoolsApplication.class, args);
+		SpringApplication.run(StatesOfItemsApplication.class, args);
 	}
 
 }
