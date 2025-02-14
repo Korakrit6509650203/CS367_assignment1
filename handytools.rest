@@ -1,0 +1,63 @@
+### 
+GET http://localhost:8080/statesOfItems
+
+###
+GET http://localhost:8080/statesOfItems/1
+
+###
+POST http://localhost:8080/statesOfItems
+Content-Type: application/json
+
+{
+    "itemsDetail": "Badminton racket",
+    "ownerName": "Poommy",
+    "storageName": "Dormitory Jpark",
+    "borrowed": false,
+    "returned": false,
+    "userName": "",
+    "whereUse": "",
+    "whenUse": "2025-02-14 00:16:09",
+    "status": "Buy item"
+}
+
+### 
+GET http://localhost:8080/statesOfItems
+
+###
+POST http://localhost:8080/statesOfItems
+Content-Type: application/json
+
+{
+    "itemsDetail": "Drill",
+    "ownerName": "KT",
+    "storageName": "Hanging at the barn's wall",
+    "borrowed": false,
+    "returned": false,
+    "userName": "",
+    "whereUse": "",
+    "whenUse": "2025-02-14 00:05:09",
+    "status": "Buy item"
+}
+
+###
+GET http://localhost:8080/statesOfItems/99
+
+
+###
+PUT http://localhost:8080/statesOfItems/1
+Content-Type: application/json
+
+{
+    "itemsDetail": "Boardgame",
+    "ownerName": "Tonkung",
+    "storageName": "Dormitory M2",
+    "borrowed": true,
+    "returned": false,
+    "userName": "Pungping",
+    "whereUse": "Dormitory M1",
+    "whenUse": "2025-02-14 00:09:09",
+    "status": "Borrowed"
+}
+
+###
+DELETE http://localhost:8080/statesOfItems/2
